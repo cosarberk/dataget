@@ -1,7 +1,7 @@
 # dataget
 this platform is get product data of e-commerce web pages as xml.
 
-## !! this project 
+
 
 ## description
 I have done this platform for a software company but after, I don't agreemented. and ı decided to share this project.
