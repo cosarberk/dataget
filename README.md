@@ -8,6 +8,8 @@ this platform is get product data of e-commerce web pages as xml.
 ## description
 I have done this platform for a software company but after, I don't agreemented. and ı decided to share this project.
 this is a demo and this project run for only trendyol now.
+
+
 //////////////////////////////
 
 ### version : 1.0
