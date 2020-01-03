@@ -1,0 +1,94 @@
+
+
+<html>
+  <head>
+   
+    <meta name="author" content="Berk Coşar">
+    <meta name="description" content="dayaget login">
+    <meta name="keywords" content="login">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataGet-Login</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <style>
+        body{background-color:#000;overflow:hidden;}
+	*{margin:0;padding:0;border:0;}
+	.uzay{height:100vh;position:absolute;top:0;left:0;z-index:999;}
+	.back{width:100%;height:100vh;background-image:url("dataGet_image/background.jpeg");background-size:cover;opacity:0.7;filter:blur(25px);}
+	input[type=text]:focus{outline: 2px solid #cc7a00;}
+	input[type=password]:focus{outline: 2px solid #cc7a00;}
+        .icon_alan{width:500px;height:140px;margin:0 auto;margin-top:-50px;top:20%;position:relative;}   
+        .dataget_ikon{width:100px;height:100px;margin:0 auto;}
+	.icon_m{width:90%;height:90%;}
+	.dataget_text{width:100%;height:40px;font-size:40px;color:#ccc;text-align:center;line-height:40px;}
+
+	.giris_panel{width:350px;height:150px;background-color:#111;position:absolute;top:50%;left:50%;margin-top:-75px;margin-left:-175px;border-radius:10px;opacity:0.4;}
+	.input_text{color:#ccc;width:90%;height:35px;background-color:transparent;border:2px solid #ccc;border-radius:5px;margin-left:16px;margin-top:15px;}
+	.bottom{width:100%;height:40px;margin-top:10px;}
+	.get_btn{width:80px;height:30px;position:relative;float:right;right:10px;top:0;z-index:999;border:2px solid #ccc;border-radius:15px;color:white;font-size:15px;text-align:center;line-height:30px;transition:0.3s linear;cursor:pointer;}
+	.get_btn:hover{color:#FF9900;border-color:#FF9900;}
+	.i{position:fixed;z-index:9999;font-size:25px;bottom:0;right:15px;;color:black;font-weight:bold;}
+      </style>
+  </head>
+
+
+ <body>
+  <div class="alan">
+   <div class="back"> </div>
+   <div class="uzay">
+       <div class="icon_alan">
+ 	 <div class="dataget_ikon">
+	   <img src="dataGet_image/dataget_icon.png" class="icon_m"/>
+	 </div>
+	 <div class="dataget_text">DataGet</div>
+       </div>
+
+    <div class="giris_panel">
+      <input id="k_adi" type="text" placeholder="Kullanıcı Adı" class="input_text"/>
+      <input id="sifre"  type="password" placeholder="şifre" class="input_text"/>
+      <div class="bottom">
+	 <div class="get_btn">Giriş</div>
+     
+      </div>
+    </div>
+  </div>
+  <div class="i">2019 @ Berk Coşar</div>
+</div>
+
+ </body>
+
+</html>
+
+
+<script>
+
+$(document).ready(function(){
+
+    var width = screen.width;
+    var height = screen.height;
+    $("#k_adi").focus()
+    $('.uzay').css({"width":width});
+    $('.get_btn').on("click",function(){
+
+	var k_adi = $('#k_adi').val();
+	var sifre = $('#sifre').val();
+	if(k_adi == "berk" && sifre == "dataget123"){
+	    $(".uzay").remove();
+	    $(".back").remove();
+	    window.open("panel.php");
+            location.reload();	    
+	}else{alert("hatalı kullanıcı adı veya şifre"); $('#k_adi').val("");$("#sifre").val("");}
+	if(k_adi =="" && sifre==""){alert("boş alanları doldurun.");}
+    });
+
+
+    $("#sifre").keydown(function (e) {
+  if (e.keyCode == 13) {
+    $('.get_btn').click();
+  }
+});
+    
+});
+</script>
+
+
