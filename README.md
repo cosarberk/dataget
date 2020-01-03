@@ -27,4 +27,5 @@ this is a demo and this project run for only trendyol now.
  - username : berk
  - password : dataget123
  
- 
+ ## LICENSE
+ - license details (https://github.com/cosarberk/dataget/blob/master/LICENSE)
